@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+        <reference name="footer">
+            <action method="setTemplate">
+                <template>qss/admintheme/page/footer.phtml</template>
+            </action> 
+        </reference>
+        
+        <reference name="head">
+            <action method="setTemplate">
+                <template>qss/admintheme/page/head.phtml</template>
+            </action>
+        </reference>
+    </default>
+</layout>

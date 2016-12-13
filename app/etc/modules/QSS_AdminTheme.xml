@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <QSS_AdminTheme>
+            <active>true</active>
+            <codePool>community</codePool>
+        </QSS_AdminTheme>
+    </modules>
+</config>

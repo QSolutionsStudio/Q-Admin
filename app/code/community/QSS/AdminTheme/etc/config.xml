@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <QSS_AdminTheme>
+            <version>0.1.0</version>
+        </QSS_AdminTheme>
+    </modules>
+    <global>
+        <blocks>
+            <qss_admintheme>
+                <class>QSS_AdminTheme_Block</class>
+            </qss_admintheme>
+            <adminhtml>
+                <rewrite>
+                        <page_menu>QSS_AdminTheme_Block_Adminhtml_Menu</page_menu>
+                </rewrite>
+            </adminhtml>
+        </blocks>
+        <helpers>
+            <qss_admintheme>
+                <class>QSS_AdminTheme_Helper</class>
+            </qss_admintheme>
+        </helpers>
+        <models>
+            <qss_admintheme>
+                <class>QSS_AdminTheme_Model</class>
+            </qss_admintheme>
+        </models>
+        <events>
+            <adminhtml_controller_action_predispatch_start>
+                <observers>
+                    <qss_admintheme_admin_predispatch>
+                        <class>QSS_AdminTheme_Model_Adminhtml_Observer</class>
+                        <method>setTheme</method>
+                    </qss_admintheme_admin_predispatch>
+                </observers>
+            </adminhtml_controller_action_predispatch_start>
+        </events>
+    </global>
+    <adminhtml>
+        <layout>
+            <updates>
+                <qss_admintheme>
+                    <file>qss/admintheme.xml</file>
+                </qss_admintheme>
+            </updates>
+        </layout>
+        <themes>
+            <default module="qss_admintheme">
+                <label>Default</label>
+            </default>
+            <go module="qss_admintheme">
+                <label>Magento Go</label>
+            </go>
+        </themes>
+    </adminhtml>
+    <default>
+        <qss_admintheme>
+            <config>
+                <theme>go</theme>
+            </config>
+        </qss_admintheme>
+    </default>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <qss_admintheme before="Mage_Adminhtml">QSS_AdminTheme_Adminhtml</qss_admintheme>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+</config>
