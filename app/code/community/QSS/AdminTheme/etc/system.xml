@@ -52,10 +52,5 @@
             <sort_order>200</sort_order>
             <class>submenu-catalog</class>
         </catalog>
-        <iwdall translate="label" module="iwdall">
-            <label>IWD Extensions</label>
-            <sort_order>210</sort_order>
-            <class>submenu-iwd</class>
-        </iwdall>
     </tabs>
 </config>
