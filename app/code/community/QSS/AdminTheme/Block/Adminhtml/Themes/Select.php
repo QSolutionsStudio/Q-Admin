@@ -8,6 +8,7 @@ class QSS_AdminTheme_Block_Adminhtml_Themes_Select extends Mage_Adminhtml_Block_
             ->setId('interface_theme')
             ->setTitle($this->helper('qss_admintheme')->__('Current Admin Theme'))
             ->setValue(Mage::getStoreConfig('qss_admintheme/config/theme'))
+            ->setExtraParams('style="width:200px"')
             ->setOptions($this->_getSelectOptions());
     }
 
